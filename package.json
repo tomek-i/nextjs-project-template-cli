@@ -1,6 +1,6 @@
 {
   "name": "@tomek-i/nextjs-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to quickly start a Next.js project from a template.",
   "type": "module",
   "bin": {
