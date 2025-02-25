@@ -1,0 +1,30 @@
+name: Deploy Package to NPM
+
+on:
+  push:
+    branches:
+      - 'main'  # Trigger deployment when the main branch is updated
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify your Node.js version
+
+      # Configure npm authentication
+      - name: Configure npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      # Publish the package to npm
+      - name: Publish package
+        run: npm publish --access public
