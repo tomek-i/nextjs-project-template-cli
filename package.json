@@ -6,9 +6,38 @@
   "bin": {
     "nextjs-starter": "./bin/cli.js"
   },
-  "keywords": [],
-  "author": "Tomek Iwainski",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "cli",
+    "template",
+    "project",
+    "nextjs-starter"
+  ],
+  "author": {
+    "name": "Tomek Iwainski",
+    "email": "tomek.iwainski@gmail.com",
+    "url": "https://github.com/tomek-i"
+  },
   "license": "MIT",
+  "homepage": "https://tomek.au",
+  "bugs": {
+    "url": "https://github.com/tomek-i/nextjs-project-template-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomek-i/nextjs-project-template-cli"
+  },
+  "contributors": [
+    {
+      "name": "Tomek Iwainski",
+      "email": "tomek.iwainski@gmail.com",
+      "url": "https://github.com/tomek-i"
+    }
+  ],
+  "scripts": {
+    "deploy": "npm publish --access public"
+  },
   "dependencies": {
     "chalk": "^5.4.1",
     "degit": "^2.8.4"
